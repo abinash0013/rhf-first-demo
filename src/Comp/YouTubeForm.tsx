@@ -59,11 +59,25 @@ const YouTubeForm = () => {
                   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
                 message: "Invalid email format",
               },
-              validate: (fieldValue) => {
-                return (
-                  fieldValue !== "admin@examle.com" ||
-                  "Enter a different email address"
-                );
+              // validate: (fieldValue) => {
+              //   return (
+              //     fieldValue !== "admin@examle.com" ||
+              //     "Enter a different email address"
+              //   );
+              // },
+              validate: {
+                notAdmin: (fieldValue) => {
+                  return (
+                    fieldValue !== "admin@example.comm" ||
+                    "Enter a different email address"
+                  );
+                },
+                notBlackListed: (fieldValue) => {
+                  return (
+                    !fieldValue.endsWith("baddomain.com") ||
+                    "This Domain is not Supported"
+                  );
+                },
               },
             })}
           />
