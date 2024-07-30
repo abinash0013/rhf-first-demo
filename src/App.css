@@ -10,12 +10,13 @@ body {
   background-color: #f2f2f2;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: center; 
   margin: 0;
 }
 
 .form-container {
+  width: 500px;
+  text-align: left;
   background-color: #fff;
   padding: 15px;
   border-radius: 8px;
@@ -39,10 +40,10 @@ body {
   border-radius: 4px;
   background-color: #fff;
   color: #000;
+  width: 475px;
 }
 
-.form-group button {
-  width: 100%;
+.form-group button { 
   padding: 10px;
   background-color: #000;
   color: white;
